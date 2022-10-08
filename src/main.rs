@@ -1,9 +1,14 @@
 // prelude
 // io input/output library that comes from the standard library std
 use std::io;
+use rand::Rng; // The Rng trait defines methods
 
 fn main() {
     println!("Guess the number!");
+
+    let secret_number = rand::thread_rng().gen_range(1..=100);
+
+    println!("The secret number is: {secret_number}");
 
     println!("Please input your guess.");
 
